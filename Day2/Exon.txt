@@ -1,0 +1,6 @@
+exon 1050 
+exon 1300 
+exon 3000 
+exon 5000 
+exon 7000
+mRNA 1300
