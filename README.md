@@ -8,7 +8,7 @@ Welcome to **Module I: WGS Analysis**. This repository contains hands-on tutoria
 ## 📖 How to Use This Tutorial
 
 To get the most out of this module:
-1. **Read the Tutorials in Sequence:** Start with Chapter 2F to master fundamental Unix operations, then proceed to Chapter 3A to work with real genomics data.
+1. **Read the Tutorials in Sequence:** Start with Chapter 1 to master fundamental Unix operations, then proceed to Chapter 2 to work with real genomics data.
 2. **Execute Every Command in Your Terminal:** Do not just read through—open your terminal, type or paste each command, observe the terminal output, and inspect the files.
 3. **Explore and Experiment:** Check file outputs with `head`, `less`, and `wc` as you pipe commands together. Try tweaking parameters (e.g., `-n`, `-k`, `-w`) to see how the results change.
 
@@ -16,7 +16,7 @@ To get the most out of this module:
 
 ## 🗂️ Tutorial Chapters
 
-### [Chapter 1: How to Work on Unix Systems (Hands-on Session)](./2F.-Day-1:-How-to-Work-on-Unix-System-(Hands-on-Session).md)
+### [Chapter 1: How to Work on Unix Systems (Hands-on Session)](./Day1-I:-How-to-Work-on-Unix-System-(Hands-on-Session).md)
 * **Objective:** Learn basic navigation, directory hierarchies, file permissions, creation, and stream manipulation.
 * **Topics Covered:**
   * Directory navigation: `pwd`, `cd`, `ls -lah`
@@ -26,7 +26,7 @@ To get the most out of this module:
   * Standard streams & redirection: `stdin`, `stdout` (`>`), append (`>>`), and `stderr` (`2>`)
   * Compression & archiving: `gzip`, `tar -czvf`, `zip`, and `unzip`
 
-### [Chapter 2: Unix Essentials for Genomics Data Processing (Hands-on Session)](./3A.-Day-2:-Unix-essential-for-genomics-data-processing-and-analysis-(Hands-on-Session).md)
+### [Chapter 2: Unix Essentials for Genomics Data Processing (Hands-on Session)](./Day1-II:-Unix-essential-for-genomics-data-processing-and-analysis-(Hands-on-Session).md)
 * **Objective:** Process, filter, and extract biological metrics from raw sequencing reads (FASTQ) and reference sequences (FASTA).
 * **Topics Covered:**
   * File integrity verification: `md5sum` / `md5`, and format validation with `file`
@@ -47,7 +47,7 @@ To get the most out of this module:
 
 ## 🚀 Getting Started & Data Setup
 
-All demo datasets required for the exercises in Chapter 3A are bundled in `Day2.zip`.
+All demo datasets required for the exercises in Chapter 2 are bundled in `Day2.zip`.
 
 Open your terminal and run:
 
@@ -82,13 +82,13 @@ ls -lh
 Clone Repo / Open Terminal
         │
         ▼
-Read Chapter 2F ──► Practice navigation, file management, and I/O redirection
+Read Chapter 1 ──► Practice navigation, file management, and I/O redirection
         │
         ▼
 Unzip Day2.zip  ──► cd Day2
         │
         ▼
-Read Chapter 3A ──► Run genomics pipelines (FASTQ counting, cut/paste/grep/sort/sed)
+Read Chapter 2 ──► Run genomics pipelines (FASTQ counting, cut/paste/grep/sort/sed)
         │
         ▼
 Solve Assignment 1 Tasks ──► Verify solutions against the guide
