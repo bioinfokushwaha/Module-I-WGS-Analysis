@@ -16,7 +16,7 @@ To get the most out of this module:
 
 ## 🗂️ Tutorial Chapters
 
-### 1. [Chapter 2F: How to Work on Unix Systems (Hands-on Session)](./2F.-Day-1:-How-to-Work-on-Unix-System-(Hands-on-Session).md)
+### 1. [Chapter 1: How to Work on Unix Systems (Hands-on Session)](./2F.-Day-1:-How-to-Work-on-Unix-System-(Hands-on-Session).md)
 * **Objective:** Learn basic navigation, directory hierarchies, file permissions, creation, and stream manipulation.
 * **Topics Covered:**
   * Directory navigation: `pwd`, `cd`, `ls -lah`
@@ -26,7 +26,7 @@ To get the most out of this module:
   * Standard streams & redirection: `stdin`, `stdout` (`>`), append (`>>`), and `stderr` (`2>`)
   * Compression & archiving: `gzip`, `tar -czvf`, `zip`, and `unzip`
 
-### 2. [Chapter 3A: Unix Essentials for Genomics Data Processing (Hands-on Session)](./3A.-Day-2:-Unix-essential-for-genomics-data-processing-and-analysis-(Hands-on-Session).md)
+### 2. [Chapter 2: Unix Essentials for Genomics Data Processing (Hands-on Session)](./3A.-Day-2:-Unix-essential-for-genomics-data-processing-and-analysis-(Hands-on-Session).md)
 * **Objective:** Process, filter, and extract biological metrics from raw sequencing reads (FASTQ) and reference sequences (FASTA).
 * **Topics Covered:**
   * File integrity verification: `md5sum` / `md5`, and format validation with `file`
