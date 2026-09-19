@@ -456,45 +456,45 @@ done
 * **Multi-Line to Single-Line FASTA:**
 ```bash
 # Using tr and sed to join sequence lines while preserving header lines:
-cat input.fa | tr '\n' '\t' | sed 's/\t>/\n>/g' | sed 's/\t/\n/' | tr -d '\t' > single_line.fa
+cat Test.fa | tr '\n' '\t' | sed 's/\t>/\n>/g' | sed 's/\t/\n/' | tr -d '\t' > single_line.fa
 ```
 
-* **Single-Line to Multi-Line FASTA (wrapping at 60 characters):**
+* **Single-Line to Multi-Line FASTA (wrapping at 10 or 60 characters):**
 ```bash
-# Using fold -w 60 (taught in Section III.7):
-fold -w 60 sequence_only.txt
+# Using fold -w 10 (taught in Section III.7):
+fold -w 10 Test.fa
 
-# Or using sed to insert a newline after every 60 characters:
-sed 's/.\{60\}/&\n/g' sequence_only.txt
+# Or using sed to insert a newline after every 10 characters:
+sed 's/.\{10\}/&\n/g' Test.fa
 ```
 
 ### 4. Random Dataset Generation / Subsampling for FASTQ and FASTA
 **Goal:** Extract a subset of reads/sequences for quick testing.
 ```bash
-# Extract the first 1,000 reads (4,000 lines) from FASTQ using head:
-zcat Test.fq.gz | head -n 4000 | gzip > subset_1k.fq.gz
+# Extract the first 5 reads (20 lines) from FASTQ using head:
+zcat Test.fq.gz | head -n 20 | gzip > subset_5reads.fq.gz
 
-# Extract the first 100 sequences from a single-line FASTA using head:
-head -n 200 Test.fa > subset_100.fa
+# Extract the first 2 sequences from single-line FASTA using head:
+head -n 4 Test.fa > subset_2seqs.fa
 ```
 
 ### 5. Extract a Specific Gene / Sequence of Interest from Genome File
-**Goal:** Extract the sequence for a specific entry (e.g., `>Gene_123`) from a FASTA file.
+**Goal:** Extract the sequence for a specific entry (e.g., `>Seq2_Hemoglobin`) from `Test.fa`.
 ```bash
 # Using sed pattern range (as taught in Section III.8):
-sed -n '/>Gene_123/,/>/p' genome.fa | sed '$d'
+sed -n '/>Seq2_Hemoglobin/,/>/p' Test.fa | sed '$d'
 
 # If the FASTA has single-line sequences, use grep with context line -A 1 (taught in Section III.4):
-grep -A 1 "^>Gene_123" genome.fa
+grep -A 1 "^>Seq2_Hemoglobin" Test.fa
 ```
 
 ### 6. Creation of Non-Redundant Dataset (Deduplication)
 **Goal:** Remove duplicate identical sequences from a FASTA dataset.
 ```bash
-# Solution using paste, sort, and tr:
+# Solution using paste, sort, and tr on Test.fa:
 # 1. Turn pairs of lines (Header and Sequence) into single tab-separated lines:
 # 2. Sort uniquely by the sequence column (Column 2) using sort -k 2,2 -u:
 # 3. Restore newlines using tr:
-cat input.fa | paste - - | sort -k 2,2 -u | tr '\t' '\n' > non_redundant.fa
+cat Test.fa | paste - - | sort -k 2,2 -u | tr '\t' '\n' > non_redundant.fa
 ```
 
